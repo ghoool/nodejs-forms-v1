@@ -1,0 +1,26 @@
+{
+  "name": "nodejs-forms-v1",
+  "version": "1.0.0",
+  "description": "Sample server to handle form POST requests",
+  "main": "index.js",
+  "dependencies": {
+    "connect": "^3.6.6",
+    "express": "^4.16.3",
+    "formidable": "^1.2.1",
+    "upper-case": "^1.1.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ghoool/nodejs-forms-v1.git"
+  },
+  "author": "ghoool",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ghoool/nodejs-forms-v1/issues"
+  },
+  "homepage": "https://github.com/ghoool/nodejs-forms-v1#readme"
+}
