@@ -1,0 +1,21 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id=form-container>
+        <h2>Vandalay Industries</h2>
+        <p>Keep in touch by joining our mailing list!</p>
+        
+        <!--sample contact request form-->    
+        <form method="POST" action="http://localhost:8080/formsubmit" id=form-main>
+            <label>First name:</label><br/><input type=text name=ufname id=ufname></input><br/>
+            <label>Last name:</label><br/><input type=text name=ulname id=ulname></input><br/>
+            <label>Contact e-mail:</label><br/><input type=email name=uemail id=uemail></input><br/>
+            <button type=submit id=submitbtn>Submit</submit>
+        </form>
+	</div>
+	
+</body>
+</html>

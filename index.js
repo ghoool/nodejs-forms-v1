@@ -1,11 +1,21 @@
-var http = require('http');
-var qs = require('querystring');
-var fs = require('fs');
+var express = require('express');
+var bodyParser = require('body-parser');
+var path = require('path');
 
-//create server instance
-http.createServer((req, res) => {
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.end('Hello world!\n');
-}).listen(8080);
+var app = express();
 
-console.log('Server running on port 8080...');
+// body-parser middleware
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+
+// set static path
+app.use(express.static(path.join(__dirname, 'public')));
+
+// handle route for form post request, echo success message
+app.post('/formsubmit', function(req, res){
+    res.send('Thanks '+req.body.ufname+'! We will contact you soon at '+req.body.uemail);
+})
+
+app.listen(8080, function(){
+    console.log('Server running on port 8080...');
+});
